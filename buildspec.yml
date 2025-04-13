@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto17
+    commands:
+      - echo "Starting install Phase..."
+  pre_build:
+    commands:
+      - echo "Starting pre_build Phase..."
+  build:
+    commands:
+      - echo "Starting build Phase..."
+      - mvn clean install
+  post_build:
+    commands:
+      - echo "Starting post_build Phase..."
+artifacts:
+  files:
+    - target/demoApp-1.0.jar
